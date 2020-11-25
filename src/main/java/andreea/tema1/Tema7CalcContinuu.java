@@ -8,7 +8,7 @@ public class Tema7CalcContinuu {
         System.out.println("The calculator will run as long as you write 'yes'");
         String run = "yes";
 
-        do  {
+        do {
             System.out.println("insert first number");
             int n1 = sc.nextInt();
             System.out.println("insert second number");
@@ -36,6 +36,7 @@ public class Tema7CalcContinuu {
         while (run.equals("yes"));
 
         System.out.println("You have not said 'yes'. Thank you for using the calculator");
+        sc.close();
     }
 }
 

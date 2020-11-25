@@ -12,9 +12,9 @@ public class Tema2SmallersNumberInArrayForEach {
         int sir[] = new int[n];
         int min;
 
-        for (int i=0;i<n; i++){
-            System.out.println("Introduceti elementul cu numarul  "+(i+1));
-            sir[i]=scan.nextInt();
+        for (int i = 0; i < n; i++) {
+            System.out.println("Introduceti elementul cu numarul  " + (i + 1));
+            sir[i] = scan.nextInt();
         }
 
         min = sir[0];
@@ -23,6 +23,7 @@ public class Tema2SmallersNumberInArrayForEach {
                 min = num2;
             }
         }
-        System.out.println("Minimul este  "+min);
+        scan.close();
+        System.out.println("Minimul este  " + min);
     }
 }

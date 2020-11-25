@@ -9,6 +9,7 @@ public class Tema5FindPrimeNumbers {
         Scanner sc = new Scanner(System.in);
         System.out.println("Insert the maximum number to witch you want the search of prime numbers");
         int numMax = sc.nextInt();//numarul pana unde se cauta
+        sc.close();
         int[] primeNumbers = new int[200];
         boolean isPrime;//decide daca un numar este prim
         if (numMax <= 1) {
