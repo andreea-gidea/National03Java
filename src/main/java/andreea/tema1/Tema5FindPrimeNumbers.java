@@ -12,6 +12,7 @@ public class Tema5FindPrimeNumbers {
         sc.close();
         int[] primeNumbers = new int[200];
         boolean isPrime;//decide daca un numar este prim
+        int numberOfPrimes=0;
         if (numMax <= 1) {
             System.out.println("The number should be greater than 1");
         } else if (numMax == 2) {
@@ -20,7 +21,7 @@ public class Tema5FindPrimeNumbers {
             System.out.println("Please insert a number lower than 1224");
         } else {
             int positionInArray = 0;
-            for (int i = 3; i <= numMax; i += 1) {
+            for (int i = 3; i <= numMax; i += 2) {
                 int j = 3;//takes all numbers that could divide the supposed prime number
                 isPrime = true;//assume it is prime
                 while (j <= sqrt(i)) {//proves if it is not prime
@@ -33,13 +34,15 @@ public class Tema5FindPrimeNumbers {
                     primeNumbers[positionInArray] = i;
                     positionInArray = positionInArray + 1;
                 }
-            }
+            }numberOfPrimes=positionInArray;
         }
-        if (primeNumbers.length >= 1) {
-            System.out.println("there are " + primeNumbers.length + "prime numbers found :");
-            for (int k = 0; k <= primeNumbers.length; k++) {
-                System.out.println("there are " + primeNumbers.length + "prime numbers found :");
-                System.out.print(primeNumbers[k]);
+
+        if (numberOfPrimes >= 1) {
+            System.out.println("there are " + (numberOfPrimes+1) + " prime numbers found :");
+            System.out.print("2");
+            for (int k = 0; k < numberOfPrimes; k++) {
+
+                System.out.print(" "+primeNumbers[k]);
             }
         }
 
