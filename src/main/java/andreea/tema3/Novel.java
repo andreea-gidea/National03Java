@@ -22,7 +22,7 @@ public class Novel extends Book {
 
     @Override
     public String toString() {
-        return "Novel{" +
+        return " Novel{" +
                 "name='" + getName() + '\'' +
                 "numberOfPages='" + getNumberOfPages() + '\'' +
                 "type='" + type + '\'' +

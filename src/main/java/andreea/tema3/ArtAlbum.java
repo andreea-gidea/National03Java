@@ -22,7 +22,7 @@ public class ArtAlbum extends Book {
 
     @Override
     public String toString() {
-        return "ArtAlbum{" +
+        return " ArtAlbum{" +
                 "name='" + getName() + '\'' +
                 "numberOfPages='" + getNumberOfPages() + '\'' +
                 "paperQuality='" + paperQuality + '\'' +

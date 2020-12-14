@@ -5,8 +5,8 @@ public class Main {
         LibraryCatalog librarie =new LibraryCatalog();
         Book novel1=new Novel("Marile Sperante", 200,"Clasic");
         Book novel2=new Novel("Cerneala", 200,"Young fiction");
-        Book artAlbum1=new Novel("Foci", 20,"Medium Quality paper");
-        Book artAlbum2=new Novel("Camile", 50,"Premium Quality paper");
+        Book artAlbum1=new ArtAlbum("Foci", 20,"Medium Quality paper");
+        Book artAlbum2=new ArtAlbum("Camile", 50,"Premium Quality paper");
         System.out.println("Lista goala  " + librarie.toString());
 
         librarie.addBook(novel1);
@@ -19,6 +19,7 @@ public class Main {
         //librarie.deleteBook(novelToBeDeleted);//o sterg
        // System.out.println(novelToBeDeleted + "gdsfs");
         librarie.deleteByName("Cerneala");
+
         System.out.println("Lista dupa stergere  " + librarie.toString());
 
       //  Book artAlbumToBeDeleted=librarie.findByName("Foci");//imi aduc cartea pe care o vreau stearsa
