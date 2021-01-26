@@ -1,6 +1,6 @@
 package andreea.tema4ATM;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 import java.time.Month;
 
@@ -16,9 +16,6 @@ public class Main {
         ATM1.deposit(100, cardOfUserNr1,"1234");//deposit money
         ATM1.interrogateBalance(cardOfUserNr1, "1234");
         ATM1.changePin(cardOfUserNr1, "1234", "2345");//change pin
-
-
-
 
     }
 }

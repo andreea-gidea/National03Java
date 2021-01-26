@@ -44,7 +44,7 @@ public class StringManipulation {
 //        printNonRepeatedCharacter("ambramburici");
 //
 //        //integer number conversion from string
-//        int j = stringToInt("-4123");
+//        int j = stringToInt("4a4a3");
 //        System.out.println("there you go " + j);
 //
 //        //Chage pos of words
@@ -61,14 +61,14 @@ public class StringManipulation {
 //        }
 
         //Longest non repeating character string
-        System.out.println("Longest non repeating char string is of length " + lengthOfNonRepeatingCharacters("Si eu ce sa fac?"));
+//        System.out.println("Longest non repeating char string is of length " + lengthOfNonRepeatingCharacters("Si eu ce sa fac?"));
         //Remove duplicates from string
-        System.out.println("Duplicates removed:  " + removeDuplicatesFromString("Andreea"));
+//        System.out.println("Duplicates removed:  " + removeDuplicatesFromString("Andreea"));
         //Remove given char froms string
-        System.out.println("Here is the new string " + removeGivenCharacterFromString("Andreea", "a"));
+//        System.out.println("Here is the new string " + removeGivenCharacterFromString("Andreea", "a"));
     }
 
-    private static String reverseString(String s) {
+    public static String reverseString(String s) {
         char[] ch = s.toCharArray();
         char[] out = new char[s.length()];
         int j = s.length();
@@ -76,11 +76,13 @@ public class StringManipulation {
             out[i] = ch[(s.length() - i - 1)];
 
         }
-        String output = Arrays.toString(out);
-        return output;
+//        String output = Arrays.toString(out);
+//        return output;
+        String trulyOut = new String(out);
+        return trulyOut;
     }
 
-    private static void printDuplicates(String s) {
+    public static void printDuplicates(String s) {
 
         char[] ch = s.toCharArray();
         char[] out = new char[s.length() / 2];
@@ -105,14 +107,14 @@ public class StringManipulation {
 //        printArray(out);
     }
 
-    private static void printArrayOfChar(char[] chars) {
-        for (int i : chars) {
-            System.out.println(chars);
-        }
+//    public static void printArrayOfChar(char[] chars) {
+//        for (int i : chars) {
+//            System.out.println(chars);
+//        }
+//
+//    }
 
-    }
-
-    private static Boolean checkIfAnagrams(String a, String b) {
+    public static Boolean checkIfAnagrams(String a, String b) {
         char[] ch1 = a.toCharArray();
         char[] ch2 = b.toCharArray();
 
@@ -143,7 +145,7 @@ public class StringManipulation {
 //        String output= Arrays.toString (out);
 //
 //    }
-    private static Boolean containsOnlyDigits(String s) {
+    public static Boolean containsOnlyDigits(String s) {
         String stringOtherCharRemoved = s.replaceAll("[^a-zA-Z]", "");
         if (s.length() == stringOtherCharRemoved.length()) {
             return true;
@@ -152,7 +154,7 @@ public class StringManipulation {
 
     }
 
-    private static int[] findNrOfVowelsAndConsonants(String s) {
+    public static int[] findNrOfVowelsAndConsonants(String s) {
         s = s.replaceAll("[^a-zA-Z]", "");
         String[] split = s.split("");
         int nrOfVowels = 0;
@@ -167,7 +169,7 @@ public class StringManipulation {
 
     }
 
-    private static int occurenceOfChar(String s, String c) {
+    public static int occurenceOfChar(String s, String c) {
 
         String[] split = s.split("");
         int nrOfOccurences = 0;
@@ -180,7 +182,7 @@ public class StringManipulation {
         return nrOfOccurences;
     }
 
-    private static void printNonRepeatedCharacter(String s) {
+    public static void printNonRepeatedCharacter(String s) {
 
         String[] split = s.split("");
 
@@ -199,79 +201,98 @@ public class StringManipulation {
 
     }
 
-    private static int stringToInt(String s) {
-        String s1 = s.replaceAll("[^0-9]+-", "");
+    public static int stringToInt(String s) {
+
+
+        String s1 = s.replaceAll("[^0-9]", "");
+
+//        System.out.println(s1);
 
         int posOrNeg = 1;
         int i = 0;
         int integerNumber = 0;
 
+        if ((s1.length() == s.length())||(s1.length() == s.length()-1 && (!s.startsWith("+") || !s.startsWith("-")))) {
 
-        if (s1.length() != s.length()) {
+
+//        if (s1.length() < s.length()-1 && (!s.startsWith("+") || !s.startsWith("-"))) {
+//            System.out.println("Cannot be converted");
+//            return 0;
+
+            if ("-".equals(String.valueOf(s.charAt(0)))) {
+                posOrNeg = -1;
+                i++;
+            }
+            if ("+".equals(String.valueOf(s.charAt(0)))) {
+                posOrNeg = 1;
+                i++;
+            }
+            for (; i < s.length(); i++) {
+                int powerOf10 = (int) Math.pow(10, (s.length() - i - 1));
+                switch (String.valueOf(s.charAt(i))) {
+
+                    case "0":
+                        integerNumber = 0 * powerOf10 + integerNumber;
+                        break;
+                    case "1":
+                        integerNumber = 1 * powerOf10 + integerNumber;
+                        break;
+                    case "2":
+                        integerNumber = 2 * powerOf10 + integerNumber;
+                        break;
+                    case "3":
+                        integerNumber = 3 * powerOf10 + integerNumber;
+                        break;
+                    case "4":
+                        integerNumber = 4 * powerOf10 + integerNumber;
+                        break;
+                    case "5":
+                        integerNumber = 5 * powerOf10 + integerNumber;
+                        break;
+                    case "6":
+                        integerNumber = 6 * powerOf10 + integerNumber;
+                        break;
+                    case "7":
+                        integerNumber = 7 * powerOf10 + integerNumber;
+                        break;
+                    case "8":
+                        integerNumber = 8 * powerOf10 + integerNumber;
+                        break;
+                    case "9":
+                        integerNumber = 9 * powerOf10 + integerNumber;
+                        break;
+
+                }
+            }
+            integerNumber = integerNumber * posOrNeg;
+            return integerNumber;
+        } else {
             System.out.println("Cannot be converted");
             return 0;
         }
-        if ("-".equals(String.valueOf(s.charAt(0)))) {
-            posOrNeg = -1;
-            i++;
-        }
-        if ("+".equals(String.valueOf(s.charAt(0)))) {
-            posOrNeg = 1;
-            i++;
-        }
-        for (; i < s.length(); i++) {
-            int powerOf10 = (int) Math.pow(10, (s.length() - i - 1));
-            switch (String.valueOf(s.charAt(i))) {
-
-                case "0":
-                    integerNumber = 0 * powerOf10 + integerNumber;
-                    break;
-                case "1":
-                    integerNumber = 1 * powerOf10 + integerNumber;
-                    break;
-                case "2":
-                    integerNumber = 2 * powerOf10 + integerNumber;
-                    break;
-                case "3":
-                    integerNumber = 3 * powerOf10 + integerNumber;
-                    break;
-                case "4":
-                    integerNumber = 4 * powerOf10 + integerNumber;
-                    break;
-                case "5":
-                    integerNumber = 5 * powerOf10 + integerNumber;
-                    break;
-                case "6":
-                    integerNumber = 6 * powerOf10 + integerNumber;
-                    break;
-                case "7":
-                    integerNumber = 7 * powerOf10 + integerNumber;
-                    break;
-                case "8":
-                    integerNumber = 8 * powerOf10 + integerNumber;
-                    break;
-                case "9":
-                    integerNumber = 9 * powerOf10 + integerNumber;
-                    break;
-
-            }
-        }
-        integerNumber = integerNumber * posOrNeg;
-        return integerNumber;
 
     }
 
-    private static String reverseWords(String s, int i, int j) {
+    public static String reverseWords(String s, int i, int j) {
 
         String[] split = s.split(" ");
         String[] newString = split;
         String temp = newString[i - 1];
         newString[i - 1] = newString[j - 1];
         newString[j - 1] = temp;
-        return Arrays.toString(newString);
+        StringBuilder out=new StringBuilder();
+        for (String b:newString
+             ) {
+            out.append(b).append(" ");
+
+        }
+
+        return out.toString();
+
+
     }
 
-    private static Boolean findIfAreRotation(String s1, String s2) {
+    public static boolean findIfAreRotation(String s1, String s2) {
         if (s1.length() != s2.length()) {
             System.out.println("No way are rotation");
             return false;
@@ -286,7 +307,7 @@ public class StringManipulation {
 
     }
 
-    private static boolean isPalindrom(String s) {
+    public static boolean isPalindrom(String s) {
         char[] s2 = new char[s.length()];
         char[] ch1 = s.toCharArray();
         boolean iiPalindrom = true;
@@ -306,7 +327,7 @@ public class StringManipulation {
         return true;
     }
 
-    private static int lengthOfNonRepeatingCharacters(String s) {
+    public static int lengthOfNonRepeatingCharacters(String s) {
 
         char[] ch = s.toCharArray();
         char[] out = new char[s.length() / 2];
@@ -325,7 +346,7 @@ public class StringManipulation {
         return (s.length() - 2 * j);
     }
 
-    private static String removeDuplicatesFromString(String s) {
+    public static String removeDuplicatesFromString(String s) {
 
         char[] ch = s.toCharArray();
         char[] out = new char[s.length()];
@@ -350,11 +371,12 @@ public class StringManipulation {
             }
             i++;
         }
-        String trulyOut = new String(out);
+        String temp = new String(out);
+        String trulyOut=temp.trim();
         return trulyOut;
     }
 
-    private static String removeGivenCharacterFromString(String s, String c) {
+    public static String removeGivenCharacterFromString(String s, String c) {
 
         char[] ch = s.toCharArray();
         char[] ch2 = c.toCharArray();
@@ -378,23 +400,25 @@ public class StringManipulation {
             }
             i++;
         }
-        String trulyOut = new String(out);
+
+        String temp = new String(out);
+        String trulyOut=temp.trim();
         return trulyOut;
     }
-    private static String findMostFrequentString(String [] s) {
+//    public static String findMostFrequentString(String [] s) {
+//
+//        String[] allreadyWentThrough=new String[s.length];//stocheaza cuvintele prin care s-a trecut
+//        int timesOfOccurence=0;//va numara de cate ori se gaseste un cuvant in array
+//        int [] timesOfOccurenceAtIndex=new int[s.length];//va pastra numarul de aparitii la indexul corespunzaator cuvantului
+//
+//        for (int i=0; i<s.length; i++){
+//            for (int j=0; j<s.length; j++){
+//                //aaici am ramas
+//            }
+//        }
+//        return "MDA";
 
-        String[] allreadyWentThrough=new String[s.length];//stocheaza cuvintele prin care s-a trecut
-        int timesOfOccurence=0;//va numara de cate ori se gaseste un cuvant in array
-        int [] timesOfOccurenceAtIndex=new int[s.length];//va pastra numarul de aparitii la indexul corespunzaator cuvantului
-
-        for (int i=0; i<s.length; i++){
-            for (int j=0; j<s.length; j++){
-                //aaici am ramas
-            }
-        }
-        return "MDA";
-
-    }
+//    }
 
 
 }
