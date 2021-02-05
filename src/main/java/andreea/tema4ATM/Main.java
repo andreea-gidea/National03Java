@@ -7,7 +7,7 @@ import java.time.Month;
 public class Main {
     public static void main(String[] args) {
         User userNumberOne = new User("Andreea Gidea");//create new user
-        BankAccount bankAccOfUser1= new BankAccount("ROZBR124" , 123 , 1);//opening bank account
+        BankAccount bankAccOfUser1= new BankAccount("ROZBR124" , 123);//opening bank account
         Card cardOfUserNr1 = new Card("098255" , LocalDateTime.of(2021, Month.APRIL, 01,00,00),"1234");//create card
         bankAccOfUser1.addCard(cardOfUserNr1);//attach card to bank account
         userNumberOne.addBankAccount(bankAccOfUser1);  //give the bank account to the user

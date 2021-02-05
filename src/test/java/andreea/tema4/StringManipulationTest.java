@@ -121,6 +121,7 @@ public class StringManipulationTest {
         Assert.assertEquals(true, out);
 
     }
+
     @Test
 
     public void testFindIfRotationFalse() {

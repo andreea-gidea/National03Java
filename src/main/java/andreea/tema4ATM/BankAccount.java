@@ -8,7 +8,7 @@ public class BankAccount {
     private int balance=0;
     private List <Card> cards = new ArrayList<>();
 
-    public BankAccount(String IBAN, int initialSumDeposit, int numberOfCards) {
+    public BankAccount(String IBAN, int initialSumDeposit) {
         this.IBAN = IBAN;
         balance=balance+initialSumDeposit;
     }
