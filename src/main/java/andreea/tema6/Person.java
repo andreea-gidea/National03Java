@@ -1,17 +1,16 @@
 package andreea.tema6;
 
-
 import java.util.*;
 
-public class Person  {
+public class Person {
 
     private String name;
     private int age;
     private String CNP;
 
-    private Map <String, Hobby> listOfHobbyes = new HashMap <>();
+    private Map<String, Hobby> listOfHobbyes = new HashMap<>();
 
-    public Person()  {
+    public Person() {
     }
 
     public Person(String name, int age, String CNP) {
@@ -37,9 +36,8 @@ public class Person  {
     }
 
     public void addHobby(String nrCrt, Hobby h) {
-        this.listOfHobbyes.putIfAbsent(nrCrt,h);
+        this.listOfHobbyes.putIfAbsent(nrCrt, h);
     }
-
 
     @Override
     public String toString() {

@@ -1,21 +1,21 @@
 package andreea.tema6;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
 public class Hobby {
     private String nameOfHobby;
     private int frequency;
-    private List<Address> addresses= new ArrayList<>();
+    private List<Address> addresses = new ArrayList<>();
 
     public Hobby(String nameOfHobby, int frequency) {
         this.nameOfHobby = nameOfHobby;
         this.frequency = frequency;
 
     }
-    public void addAddress (Address address){
+
+    public void addAddress(Address address) {
         this.addresses.add(address);
     }
 
