@@ -1,0 +1,64 @@
+1. Calculate the sum of the first 100 prime numbers.
+
+
+2. Display the smallest number from an array of numbers (2 versions: with normal for and with foreach)
+
+
+3. Display the max digit from a number, read the number from keyboard.
+
+
+4. Check if a number is palindrom ( e.g palindrom 1221, 34143), read the number from keyboard.
+
+
+5. Display all the prime numbers lower than a given number, read the number from keyboard
+
+
+6. Change the implementation of the calculator from the previous meeting to use only if-else instead of switch.
+
+
+7. Change the implementation of the calculator from the previous meeting to not stop after one calculation. (Hint: put switch inside a while loop)
+
+
+8. Calculate and display the factorial of a given number n. (ex: 4! = 1*2*3*4)
+
+
+9. Write a Java program to remove the duplicate elements of a given array and return the new length of the array.
+
+     Sample array: [20, 20, 30, 40, 50, 50, 50]
+
+     After removing the duplicate elements the program should return [20, 30, 40, 50] as the array without duplicates. 
+
+
+10. Write a method that checks if the array is square (i.e. every row has the same length as a itself).
+a. for input: 
+
+{
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+}
+
+should return true
+
+b. for input: 
+
+{
+        {1},
+        {5, 7, 4},
+        {7, 8}
+}
+
+should return false
+
+method definition should be: 
+public static boolean isSquare(int[][] array)
+
+
+11. Print the number of days specific to each month in year. 
+input: Month (string) of index of the month(1, 2, ... 12)
+output: 31, 30, 28
+
+
+12. Solve all the challenges from the introduction section of the Java roadmap in Hackerrank (see screenshot) except the one with Date and Time: 
+https://www.hackerrank.com/domains/java?filters%5Bsubdomains%5D%5B%5D=java-introduction&badge_type=java
+

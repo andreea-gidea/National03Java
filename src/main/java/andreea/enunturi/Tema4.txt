@@ -1,0 +1,36 @@
+1. Solve the Hackerrank string challenges: https://www.hackerrank.com/domains/java?filters%5Bstatus%5D%5B%5D=unsolved&filters%5Bsubdomains%5D%5B%5D=java-strings&badge_type=java
+
+The ones with regex are not mandatory.
+
+NOTE: Please add the pictures with solved status for the challenges in the Java package with the homework.
+
+2. Solve the Hackerrank OOP challenges: https://www.hackerrank.com/domains/java?filters%5Bstatus%5D%5B%5D=unsolved&filters%5Bsubdomains%5D%5B%5D=oop&badge_type=java
+
+3. String manipulation (write all methods in the same class, with private static)
+
+Write a method to reverse a given string.
+//Write a method to print duplicate characters from a string.
+Write a method to check if two strings are anagrams of each other.
+//Write a method to find all the permutations of a string.
+Write a method to check if a string contains only digits.
+//Write a method to find duplicate characters in a given string.
+Write a method to count a number of vowels and consonants in a given string.
+Write a method to count the occurrence of a given character in a string.
+Write a method to print the first non-repeated character from a string.
+Write a method to convert a given String into int like the Integer.parseInt().
+Write a method to reverse words in a given sentence without using any library method.
+Write a method to check if two strings are a rotation of each other.
+//Write a method to check if a given string is a palindrome.
+Write a method to find the length of the longest substring without repeating characters.
+Given string str, write a method to find the longest palindromic substring in str.
+Write a method to remove the duplicate character from String.
+Write a method to remove a given character from String.
+Given an array of strings, find the most frequent word in a given array, I mean, the string that appears the most in the array. In the case of a tie, ?the string that is the smallest (lexicographically) ?is printed.
+3.  Write an app that simulates an ATM machine. 
+Requirements:
+the app should run indefinitely, allowing customers to enter their cards and withdraw money, deposit money, interogate sold and change pin. 
+class design (just a recomandation):
+        - User has one or more BankAccounts
+        - User has one or more Cards
+        - Cards are emitted to a single BankAccount
+        - User interacts with Cards via a withdraw(Card), deposit(Card), changePin(Card) or interogateBalance(Card) action from ATM class based on the option he inputs to the keyboard.

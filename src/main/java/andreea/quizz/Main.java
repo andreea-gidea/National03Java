@@ -59,7 +59,7 @@ public class Main {
                 .filter(s -> StringUtils.isNotBlank(s))
                 .map(Main::readPackageFromCSV)
                 .filter(PackageForDelivery -> PackageForDelivery.getTargetLocation() == (destination))
-                .filter(PackageForDelivery -> PackageForDelivery.getDeliveryDate().equals(dateOfDelivery))///inca nu e ok
+                .filter(PackageForDelivery -> PackageForDelivery.getDeliveryDate().equals(dateOfDelivery))
                 .collect(Collectors.toList());
     }
 

@@ -1,0 +1,5 @@
+For this homework you need to write unit tests for the exercises done for the last 2 homeworks. 
+Library catalog(only for methods with business logic) and 
+String manipulation methods with ATM machine(only for methods with business logic).
+
+For String exercises change the access modifier to public so you can call them in the unit tests.

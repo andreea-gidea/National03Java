@@ -1,0 +1,8 @@
+1. Refactor all exercises from previous homework to be solved in single methods that return output specific to exercise requirement and have arguments specific to input.
+Note: Analize the need of extracting other methods as well (like isPrime(int)).  Try to use the shortcut for method extract: Ctrl+Alt+M
+
+2. Write a Java method to print the first 25 terms of the Fibonacci series (without recursion).
+
+3. Write a Java method to find the duplicate characters in a string. (Hint use str.toCharArray() to split the string into an array of characters)
+
+4. Write a Java method to find all pairs of elements in an array whose sum is equal to a given number.
