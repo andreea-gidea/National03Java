@@ -1,0 +1,40 @@
+JDBC+SQL Homework
+Importati schema din fisierul atasat (copiati continutul in query console si rulati normal ca la curs).
+
+1. Să se selecteze deptno, enume, job și sal pentru angajatii care au sef-ul cu id-ul 7902.
+2. Să se selecteze numele, funcția și salariu pentru angajații care au aceași funcție.
+3. Să se selecteze numele, funcția și salariul anual pentru toți angajații din același departament.
+4. Să se selecteze numele, funcția și venitul lunar pentru toți angajații care au venitul lunar mai mare de 2000.
+ Venitul lunar este o funcție care are formula salariu + ifnull(comision, 0)
+5.Să se selecteze id-ul angajatului, numele, funcția și data angajării pentru toți angajații care
+ au aceași funcție și au venit în firmă după o anumită dată.
+6. Să se adauge 10 noi angajati.
+7. Să se calculeze o primă de 15% pentur toți angajații din departamentul 20.
+8. Să se selecteze id-ul și numele departamentului din tabela departamente.
+9. Să se selecteze id-ul, numele, funcția și data angajării pentru toți angajații din firmă. 
+Ordonați descrescător în funcție de id. Concatenați id-ul cu numele.
+10. Să se selecteze id-ul, numele, fucția și venitul lunar pentru toți angajatii din firmă. Să se adauge la select o coloană goală care să se numească semnătura. 
+Concatenați id-ul cu numele. Ordonați după departament.
+11. Să se selecteze numele și funcția angajaților.
+12. Să se facă o listă cu numele departamentului și codul acestuia. Ordonați după numele departamentului.
+13. Să se selecteze toți angajații care au funcția manager. Ordonați după id-ul departamentului
+14. Selectați toate persoanele care s-au angajat intr-o anumită perioadă aleasa de voi.
+15. Să se listeze id-ul, numele, funcția, venitul lunar pentru angajații care au următoarele id-uri: 7499 , 7902 , 7876
+16. Să se selecteze toate persoanele care au fost angajate în anul 1980
+17. Să se selecteze toate persoanele al căror nume începe cu litera F și numele funcției are 7 caractere.
+18. Să se listeze angajații din departamentul 20 care nu au primit comision.
+19. Să se listeze angajații care au primit comision și au funcția SALESMAN
+20. Să se selecteze toți angajații care au funcția MANAGER și salariul peste 1500 și toți angajații care au funcția ANALYST.
+21. Selectați toți angajații care s-au angajat înainte de anul 1982 și nu au primit comision.
+22. Selectați toți angajații care au salariul peste 3000 și nu au șefi, ordonați după departament.
+23. Selectați numele, funcția și venitul anual al angajaților care nu au funcția MANAGER pentru un departament ales de voi.
+24. Selectați departamentul, numele, data angajării și salariul tuturor persoanelor angajate în anul 1981 din două departamente alese de voi.
+
+Vreau ca toate exercitiile sa fie rezolvate intr-un singur fisier .sql, pus in proiectul de tema.
+
+
+Utilizand schema  hr din fisierul atasat , creati doua clase DAO(DataAccessObject)/Repository: EmployeeDAOImpl si DepartmentDAOImpl 
+care sa implementeze interfetele: EmployeeDAO si DepartmentDAO cu cele 4 operatii CRUD (create, read, update, delete), 
+utilizand si parametri de filtrare, la alegere ( in general, stergerea si updatarea se recomanda sa se faca dupa ID, la select se pot utiliza orice parametrii de filtrare sunt necesari).
+PS: Aveti mana libera sa le faceti si cu JPA, dar cu JDBC este obligatoriu(asta va fi punctat)
+Am atasat si varianta in care am modificat numele sa nu mai fie cu majuscule
